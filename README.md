@@ -18,7 +18,11 @@ If you are developing a production application, we recommend using TypeScript wi
 -vite
 -configured tailwindcss
 -header
+-routing
 -login form
+-sign up form
+-form validation
+-useRef hook
 # Feature
 -Login/Signup
    -sign in/sign up
@@ -33,3 +37,12 @@ If you are developing a production application, we recommend using TypeScript wi
 -NetflixGpt
    -searchbar
    -movie suggestion
+# firebase deploy
+-firebase create project
+-authenticano,email enable,save
+-npm install -g firebase in cmd
+-firebase login
+-firebase deploy
+-these 3 commands enogh for deploying the app   
+-deploying our app to production
+-create sign up user accout
