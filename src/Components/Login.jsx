@@ -1,19 +1,22 @@
 import React, { useRef, useState } from 'react'
-import Header from './Header'
+import Header from './Header.jsx'
 import logo from '../netflix.jpg'
 import { checkvalidatedata } from '../utils/validate'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
+import {signInWithEmailAndPassword } from "firebase/auth";
+
 const Login = () => {
   const[isSign,setisSign]=useState(true);
   const[errorMessage,seterrorMessage]=useState(null);
+
   const email=useRef(null);
   const password=useRef(null);
   const name=useRef(null);
   const handlebutton=()=>{
    //validate data
 console.log("isSign",isSign);
-  const message=checkvalidatedata(email.current.value,password.current.value,name.current?.value,!isSign);
+  const message=checkvalidatedata(email.current.value,password.current.value,name.current?.value,isSign);
  seterrorMessage(message);
 if(message)return;
 if(!isSign){
@@ -22,7 +25,9 @@ createUserWithEmailAndPassword(auth, email.current.value, password.current.value
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-  console.log(user);
+ 
+
+
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -31,6 +36,18 @@ createUserWithEmailAndPassword(auth, email.current.value, password.current.value
   });
 }else{
 //sign in logic
+signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+  
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    seterrorMessage(errorCode+" "+errorMessage)
+  });
+
 }
   }
   const togglesignform=()=>{

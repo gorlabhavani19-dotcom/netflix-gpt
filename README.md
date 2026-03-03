@@ -46,3 +46,15 @@ If you are developing a production application, we recommend using TypeScript wi
 -these 3 commands enogh for deploying the app   
 -deploying our app to production
 -create sign up user accout
+-implement sign in user api
+-created redux store with userslice
+-implimented sign out
+-update profile
+-fetch movies from tmdb api
+-we have one error that we have to restric the browse page
+-and if we go to the login page then it will redirect to the browse page
+-onauthstate it will call useeffect once if user is sign in it is broswe only it wont go to the login
+-unsubscribed to the onauthstate 
+-add hardcoded values to the constans file
+-register for tmdv&create app&get access
+-get data from tmdb and playing movies list

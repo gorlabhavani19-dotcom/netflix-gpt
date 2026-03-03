@@ -1,9 +1,14 @@
-import React from 'react'
-
+import Header from './Header'
+import useNow from '../hooks/usegetNow';
+import { Main } from './MainContainer.jsx';
 const Browse = () => {
-  return (
-    <div>Browse</div>
+  useNow();
+    return (
+       <div>
+      <Header/>
+    <Main/>
+    </div>
   )
 }
 
-export default Browse
+export default Browse;
