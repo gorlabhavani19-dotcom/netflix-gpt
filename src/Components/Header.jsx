@@ -36,7 +36,7 @@ const Header = () => {
   return()=>unsubscribe();
       },[])
   return (
-    <div className='absolute  w-full bg-gradient-to-b from-black flex justify-between z-10 '>
+    <div className='absolute  w-screen from-black flex justify-between z-10 '>
       <img 
       className='w-72  px-8 py-2 bg-gradient-to-b from-black'
       src={logo} alt="logo" />

@@ -58,3 +58,11 @@ If you are developing a production application, we recommend using TypeScript wi
 -add hardcoded values to the constans file
 -register for tmdv&create app&get access
 -get data from tmdb and playing movies list
+-created custom hook for nowplaying movie
+-creaated a movieslice
+-updated the store with ovies data
+-planning for the main container and the secondary container
+-fetch data for the trailer video
+-updated the tore with trailer video data
+-embeded with youtube video
+-tailwind css to make it look awsome
